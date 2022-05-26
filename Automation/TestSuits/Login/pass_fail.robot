@@ -5,7 +5,7 @@ Resource    ./resource.robot
 *** Test Cases ***
 Login should pass
     Open login page
-    Sleep    1s
+    Sleep    2s
     Give Username   demo
     Give Password   mode
     Click Button  login_button
