@@ -1,5 +1,6 @@
 *** Settings ***
 Resource     ./resource.robot
+Library  SeleniumLibrary
 
 *** Test Cases ***
 Invalid_username
@@ -17,5 +18,4 @@ Empty both
     Login should fail   ${EMPTY}    ${EMPTY}
 Correct Both
     Login should pass   98013711    Venom007
-
 

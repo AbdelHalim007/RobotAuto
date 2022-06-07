@@ -38,5 +38,5 @@ Login should pass
     Give Password   ${pass}
     Click the Login button
     Sleep    3
-    Title should be     Biggest marketplace in Qatar | Mzad Qatar
+    Title should be    Biggest marketplace in Qatar | Mzad Qatar
     [Teardown]  Close browser
