@@ -10,4 +10,4 @@ Newone
     #Click from the menu
     Click in a label
 
-#    Select From List By Label       Cars        
+[Teardown]  Close browser
