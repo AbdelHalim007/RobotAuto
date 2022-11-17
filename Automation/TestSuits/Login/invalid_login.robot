@@ -16,6 +16,6 @@ Empty password
     Login should fail   98013711  ${EMPTY}
 Empty both
     Login should fail   ${EMPTY}    ${EMPTY}
-Both right
-    Login should pass   98013711    Venom007
+#Both right
+ #   Login should pass   98013711    Venom007
 

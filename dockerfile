@@ -17,7 +17,7 @@ RUN chmod 777 /usr/local/bin/chromedriver
 
 
 RUN python3 -m pip install --upgrade pip
-COPY requirement.txt /tmp/requirement.txt
+COPY requirement.txt /tmp/requirement.txt  #ADD_thiscommandhas the same role as COPY but it acceptice http and URL
 RUN  pip3 install -r /tmp/requirement.txt
 
 #lfldgml
