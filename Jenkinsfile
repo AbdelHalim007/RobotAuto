@@ -1,6 +1,7 @@
 node {
   stage('Run Robot Tests') {
-    checkout scm
+    robot archiveDirName: 'robot-plugin', outputPath: 'C:\\Users\\abdel\\PycharmProjects\\RobotFramework\\Test-output', overwriteXAxisLabel: '', passThreshold: 20.0, unstableThreshold: 10.0
+
   }
   stage('SonarQube Analysis') {
     def scannerHome = tool 'SonarScanner';
