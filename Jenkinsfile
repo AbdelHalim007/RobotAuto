@@ -1,10 +1,7 @@
 node {
   stage('Run Robot Tests') {
-sh cd C:\\Users\\abdel\\PycharmProjects\\RobotFramework
+    robot archiveDirName: 'robot-plugin', outputPath: 'C:\\Users\\abdel\\PycharmProjects\\RobotFramework\\Test-output', overwriteXAxisLabel: '', passThreshold: 20.0, unstableThreshold: 10.0
 
-python -m robot -d Test-output Automation\\TestSuits\\Login\\invalid_login.robot.
-
-echo Completed
   }
   stage('SonarQube Analysis') {
     def scannerHome = tool 'SonarScanner';
