@@ -1,5 +1,5 @@
 node {
-  stage('Checkout Code'){
+  stage('Build'){
 
    git 'https://github.com/AbdelHalim007/RobotAuto'
 
