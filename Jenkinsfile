@@ -1,7 +1,9 @@
 node {
-  stage('Checkout Code') {
-           checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'sss', url: 'https://github.com/AbdelHalim007/RobotAuto']]])
-            }
+  stage('Checkout Code'){
+
+   git 'https://github.com/AbdelHalim007/RobotAuto'
+
+}
   stage('SonarQube Analysis') {
     def scannerHome = tool 'SonarQube';
     withSonarQubeEnv(SonarQube) {
