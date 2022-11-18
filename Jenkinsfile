@@ -3,9 +3,15 @@ node {
            checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'sss', url: 'https://github.com/AbdelHalim007/RobotAuto']]])
             }
   stage('SonarQube Analysis') {
-    def scannerHome = tool 'SonarScanner';
-    withSonarQubeEnv(SonarScanner) {
-      sh "${scannerHome}/bin/sonar-scanner"
+    def scannerHome = tool 'SonarQube';
+    withSonarQubeEnv(SonarQube) {
+      sh "$("SonarHome")}/bin/sonar-scanner"
+      -D sonar.login=admin \
+      -D sonar.password=Root3alboot \
+      -D sonar.projectKey=MazadRobot \
+      -D sonar.exclusions=vendor/**,resources/**,**/.java \
+      -D sonar.host.url=http://http://localhost:9000/"
+
     }
     stage('Nexus Building artifact') {
     checkout scm
