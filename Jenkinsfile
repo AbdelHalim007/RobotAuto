@@ -2,17 +2,33 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+        stage('Run Robot code') {
             steps {
                 echo 'Building..'
             }
         }
-        stage('Test') {
+        stage('Sonar Analysis phase') {
             steps {
                 echo 'Testing..'
             }
         }
-        stage('Deploy') {
+        stage('Build Nexus Artifact') {
+            steps {
+                echo 'Deploying....'
+            }
+            stage('Running container') {
+            steps {
+                echo 'Deploying....'
+            }
+            stage('Build Docker Image') {
+            steps {
+                echo 'Deploying....'
+            }
+            stage('Send Slack notification') {
+            steps {
+                echo 'Deploying....'
+            }
+            stage('Send email') {
             steps {
                 echo 'Deploying....'
             }
