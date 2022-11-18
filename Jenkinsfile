@@ -1,8 +1,7 @@
 node {
-  stage('Run Robot Tests') {
-    robot archiveDirName: 'robot-plugin', outputPath: 'C:\\Users\\abdel\\PycharmProjects\\RobotFramework\\Test-output', overwriteXAxisLabel: '', passThreshold: 20.0, unstableThreshold: 10.0
-
-  }
+  stage('Checkout Code') {
+           checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'sss', url: 'https://github.com/AbdelHalim007/RobotAuto']]])
+            }
   stage('SonarQube Analysis') {
     def scannerHome = tool 'SonarScanner';
     withSonarQubeEnv() {
