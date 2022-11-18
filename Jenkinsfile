@@ -16,19 +16,23 @@ pipeline {
             steps {
                 echo 'Deploying....'
             }
-            stage('Running container') {
+            }
+        stage('Running container') {
             steps {
                 echo 'Deploying....'
             }
-            stage('Build Docker Image') {
+            }
+        stage('Build Docker Image') {
             steps {
                 echo 'Deploying....'
             }
-            stage('Send Slack notification') {
+            }
+        stage('Send Slack notification') {
             steps {
                 echo 'Deploying....'
             }
-            stage('Send email') {
+            }
+        stage('Send email') {
             steps {
                 echo 'Deploying....'
             }
