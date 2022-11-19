@@ -2,5 +2,5 @@ projectKey=MazadRobot
 serverUrl=http://localhost:9000
 serverVersion=9.7.1.62043
 dashboardUrl=http://localhost:9000/dashboard?id=MazadRobot
-ceTaskId=AYSKs-_EUYlPLgSRcltb
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AYSKs-_EUYlPLgSRcltb
+ceTaskId=AYSR1mscsPKigxe6joHl
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYSR1mscsPKigxe6joHl
