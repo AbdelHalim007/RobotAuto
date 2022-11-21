@@ -12,11 +12,7 @@ pipeline {
                 echo 'Testing..'
             }
         }
-        stage('Build Nexus Artifact') {
-            steps {
-                echo 'Deploying....'
-            }
-            }
+       
         stage('Running container') {
             steps {
                 echo 'Deploying....'
