@@ -21,4 +21,4 @@ COPY requirement.txt /tmp/requirement.txt
 #ADD_thiscommandhas the same role as COPY but it acceptice http and URL
 RUN  pip3 install -r /tmp/requirement.txt
 
-
+ENTRYPOINT robot -d Test-output Automation/TestSuits/Login/invalid_login.robot

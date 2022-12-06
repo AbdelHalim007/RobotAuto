@@ -1,7 +1,27 @@
 pipeline {
     agent any
 
+    environment {
+        imageName = "myphpapp"
+        registryCredentials = "nexus"
+        registry = "192.168.1.101:8086"
+        dockerImage = ''
+    }
+
     stages {
+
+     stage('Uploading project image to Nexus') {
+     steps{
+         script {
+             dir('C:/Users/abdel/PycharmProjects/RobotFramework')  {
+             docker.withRegistry('http://'+ registry, registryCredentials ) {
+                bat 'docker tag start7 192.168.1.101:8086/start7'
+                bat 'docker push 192.168.1.101:8086/start7'
+          }}
+        }
+      }
+    }
+
 
     stage("Sonar Analysis Phase") {
             steps {
@@ -19,11 +39,7 @@ stage("Docker Image ") {
                 echo 'Building..'
             }
         }
-        stage('Sonar Analysis phase') {
-            steps {
-                echo 'Testing..'
-            }
-        }
+
 
         stage('Running container') {
             steps {
