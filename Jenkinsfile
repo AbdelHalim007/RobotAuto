@@ -9,6 +9,11 @@ pipeline {
                 bat 'sonar-scanner.bat -D"sonar.projectKey=MazadRobot" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.login=sqp_0c7b76ab6f51aee5ed436ed45bd7cd51899ff365"'
             }}}
 
+stage("Docker Image ") {
+            steps {
+                dir('C:/Users/abdel/PycharmProjects/RobotFramework') {
+                bat 'docker build .  -t start'
+            }}}
         stage('Run Robot code') {
             steps {
                 echo 'Building..'
