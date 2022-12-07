@@ -11,14 +11,29 @@ pipeline {
     stages {
 
 
-     stage('UI Tests') {
+     stage('Running Robot UI Tests') {
      steps{
      bat 'start cmd.exe /c C:\\Users\\abdel\\OneDrive\\Bureau\\automation.bat'
           sleep time: 40000, unit: 'MILLISECONDS'
 }
       }
 
-     stage('Tagging project image to Nexus') {
+      stage("SonarQube Quality Tests") {
+            steps {
+                dir('C:/Users/abdel/PycharmProjects') {
+                bat 'sonar-scanner.bat -D"sonar.projectKey=MazadRobot" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.login=sqp_0c7b76ab6f51aee5ed436ed45bd7cd51899ff365"'
+            }}}
+
+
+      stage("Building Docker Image ") {
+            steps {
+                dir('C:/Users/abdel/PycharmProjects/RobotFramework') {
+                bat 'docker build .  -t start'
+            }}}
+
+
+
+     stage('Tagging Project Image') {
      steps{
          script {
              dir('C:/Users/abdel/PycharmProjects/RobotFramework')  {
@@ -30,7 +45,7 @@ pipeline {
       }
     }
 
-  stage('Uploading project image to Nexus') {
+  stage('Uploading Project image to Nexus Private Repository') {
      steps{
          script {
              dir('C:/Users/abdel/PycharmProjects/RobotFramework')  {
@@ -43,17 +58,7 @@ pipeline {
     }
 
 
-    stage("Sonar Analysis Phase") {
-            steps {
-                dir('C:/Users/abdel/PycharmProjects') {
-                bat 'sonar-scanner.bat -D"sonar.projectKey=MazadRobot" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.login=sqp_0c7b76ab6f51aee5ed436ed45bd7cd51899ff365"'
-            }}}
 
-stage("Docker Image ") {
-            steps {
-                dir('C:/Users/abdel/PycharmProjects/RobotFramework') {
-                bat 'docker build .  -t start'
-            }}}
 
 
 
