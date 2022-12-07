@@ -13,7 +13,7 @@ pipeline {
 
      stage('UI') {
      steps{
-     bat 'start cmd.exe '
+     bat 'start cmd.exe /c cd C:\Users\abdel\PycharmProjects\RobotFramework '
 
         }
       }
