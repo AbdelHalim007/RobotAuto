@@ -10,15 +10,10 @@ pipeline {
 
     stages {
 
- stage("Email") {
-            steps {
-              emailext attachLog: true, body: '', subject: 'Jenkins Pipeline Report', to: 'abdlhalimbelkadhi@gmail.com'
-            }
-        } 
      stage('Running Robot UI Tests') {
      steps{
      bat 'start cmd.exe /c C:\\Users\\abdel\\OneDrive\\Bureau\\automation.bat'
-          sleep time: 40000, unit: 'MILLISECONDS'
+          sleep time: 60000, unit: 'MILLISECONDS'
 }
       }
 
@@ -33,6 +28,7 @@ pipeline {
             steps {
                 dir('C:/Users/abdel/PycharmProjects/RobotFramework') {
                 bat 'docker build .  -t start'
+                sleep time: 184985, unit: 'MILLISECONDS'
             }}}
 
 
@@ -61,17 +57,17 @@ pipeline {
       }
     }
 
-
-
-
-
-
         stage('Send Slack notification') {
             steps {
                 echo 'Deploying....'
             }
             }
 
+ stage("Email") {
+            steps {
+              emailext attachLog: true, body: '', subject: 'Jenkins Pipeline Report', to: 'abdlhalimbelkadhi@gmail.com'
+            }
+        }
 
     }
 }
