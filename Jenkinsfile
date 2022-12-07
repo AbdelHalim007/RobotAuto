@@ -14,14 +14,9 @@ pipeline {
      stage('UI') {
      steps{
      bat 'start cmd.exe /c C:\\Users\\abdel\\OneDrive\\Bureau\\automation.bat'
-
-        }
+          options { quietPeriod(30) }
+             }
       }
-
-
-
-
-
 
      stage('Tagging project image to Nexus') {
      steps{
