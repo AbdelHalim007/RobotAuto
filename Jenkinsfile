@@ -15,11 +15,11 @@ pipeline {
      steps{
          script {
            bat """
-    cd C:\Users\abdel\PycharmProjects\RobotFramework
+    cd C:/Users/abdel/PycharmProjects/RobotFramework
 
-    python -m robot -d Test-output Automation\TestSuits\Login\invalid_login.robot.
+    python -m robot -d Test-output Automation/TestSuits/Login/invalid_login.robot.
 
-   echo Completed 
+   echo Completed
         """
           }
         }
