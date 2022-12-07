@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.10.2 on win32)" generated="20221207 03:25:58.511" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0 (Python 3.10.2 on win32)" generated="20221207 03:33:52.142" rpa="false" schemaversion="3">
 <suite id="s1" name="Invalid Login" source="C:\Users\abdel\PycharmProjects\RobotFramework\Automation\TestSuits\Login\invalid_login.robot">
 <test id="s1-t1" name="Invalid_username" line="6">
 <kw name="Login should fail" library="resource">
@@ -10,19 +10,19 @@
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221207 03:25:58.775" level="INFO">Opening browser 'Chrome' to base url 'https://en.mzadqatar.com/login'.</msg>
-<status status="PASS" starttime="20221207 03:25:58.775" endtime="20221207 03:26:02.395"/>
+<msg timestamp="20221207 03:33:52.402" level="INFO">Opening browser 'Chrome' to base url 'https://en.mzadqatar.com/login'.</msg>
+<status status="PASS" starttime="20221207 03:33:52.402" endtime="20221207 03:33:56.664"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221207 03:26:02.395" endtime="20221207 03:26:02.524"/>
+<status status="PASS" starttime="20221207 03:33:56.665" endtime="20221207 03:33:56.791"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>${DELAY}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20221207 03:26:02.526" endtime="20221207 03:26:02.527"/>
+<status status="PASS" starttime="20221207 03:33:56.791" endtime="20221207 03:33:56.791"/>
 </kw>
-<status status="PASS" starttime="20221207 03:25:58.774" endtime="20221207 03:26:02.528"/>
+<status status="PASS" starttime="20221207 03:33:52.402" endtime="20221207 03:33:56.791"/>
 </kw>
 <kw name="Give Username" library="resource">
 <arg>${user}</arg>
@@ -30,10 +30,10 @@
 <arg>id=user_login</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221207 03:26:02.528" level="INFO">Typing text 'invalid' into text field 'id=user_login'.</msg>
-<status status="PASS" starttime="20221207 03:26:02.528" endtime="20221207 03:26:02.675"/>
+<msg timestamp="20221207 03:33:56.794" level="INFO">Typing text 'invalid' into text field 'id=user_login'.</msg>
+<status status="PASS" starttime="20221207 03:33:56.793" endtime="20221207 03:33:56.939"/>
 </kw>
-<status status="PASS" starttime="20221207 03:26:02.528" endtime="20221207 03:26:02.676"/>
+<status status="PASS" starttime="20221207 03:33:56.792" endtime="20221207 03:33:56.939"/>
 </kw>
 <kw name="Give Password" library="resource">
 <arg>${pass}</arg>
@@ -41,33 +41,33 @@
 <arg>id=user_password</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221207 03:26:02.677" level="INFO">Typing text 'Venom007' into text field 'id=user_password'.</msg>
-<status status="PASS" starttime="20221207 03:26:02.676" endtime="20221207 03:26:02.789"/>
+<msg timestamp="20221207 03:33:56.940" level="INFO">Typing text 'Venom007' into text field 'id=user_password'.</msg>
+<status status="PASS" starttime="20221207 03:33:56.940" endtime="20221207 03:33:57.062"/>
 </kw>
-<status status="PASS" starttime="20221207 03:26:02.676" endtime="20221207 03:26:02.789"/>
+<status status="PASS" starttime="20221207 03:33:56.939" endtime="20221207 03:33:57.062"/>
 </kw>
 <kw name="Click the Login button" library="resource">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id=login_button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221207 03:26:02.791" level="INFO">Clicking button 'id=login_button'.</msg>
-<status status="PASS" starttime="20221207 03:26:02.790" endtime="20221207 03:26:02.894"/>
+<msg timestamp="20221207 03:33:57.063" level="INFO">Clicking button 'id=login_button'.</msg>
+<status status="PASS" starttime="20221207 03:33:57.063" endtime="20221207 03:33:57.138"/>
 </kw>
-<status status="PASS" starttime="20221207 03:26:02.790" endtime="20221207 03:26:02.894"/>
+<status status="PASS" starttime="20221207 03:33:57.062" endtime="20221207 03:33:57.138"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>MzadQatar Login</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221207 03:26:02.899" level="INFO">Page title is 'MzadQatar Login'.</msg>
-<status status="PASS" starttime="20221207 03:26:02.894" endtime="20221207 03:26:02.899"/>
+<msg timestamp="20221207 03:33:57.146" level="INFO">Page title is 'MzadQatar Login'.</msg>
+<status status="PASS" starttime="20221207 03:33:57.139" endtime="20221207 03:33:57.146"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221207 03:26:02.899" endtime="20221207 03:26:05.058"/>
+<status status="PASS" starttime="20221207 03:33:57.146" endtime="20221207 03:33:59.255"/>
 </kw>
-<status status="PASS" starttime="20221207 03:25:58.774" endtime="20221207 03:26:05.058"/>
+<status status="PASS" starttime="20221207 03:33:52.401" endtime="20221207 03:33:59.256"/>
 </kw>
-<status status="PASS" starttime="20221207 03:25:58.772" endtime="20221207 03:26:05.059"/>
+<status status="PASS" starttime="20221207 03:33:52.401" endtime="20221207 03:33:59.256"/>
 </test>
 <test id="s1-t2" name="Invalid_password" line="8">
 <kw name="Login should fail" library="resource">
@@ -78,19 +78,19 @@
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221207 03:26:05.061" level="INFO">Opening browser 'Chrome' to base url 'https://en.mzadqatar.com/login'.</msg>
-<status status="PASS" starttime="20221207 03:26:05.061" endtime="20221207 03:26:08.806"/>
+<msg timestamp="20221207 03:33:59.260" level="INFO">Opening browser 'Chrome' to base url 'https://en.mzadqatar.com/login'.</msg>
+<status status="PASS" starttime="20221207 03:33:59.260" endtime="20221207 03:34:03.257"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221207 03:26:08.807" endtime="20221207 03:26:08.928"/>
+<status status="PASS" starttime="20221207 03:34:03.257" endtime="20221207 03:34:03.387"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>${DELAY}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20221207 03:26:08.928" endtime="20221207 03:26:08.929"/>
+<status status="PASS" starttime="20221207 03:34:03.387" endtime="20221207 03:34:03.388"/>
 </kw>
-<status status="PASS" starttime="20221207 03:26:05.061" endtime="20221207 03:26:08.929"/>
+<status status="PASS" starttime="20221207 03:33:59.260" endtime="20221207 03:34:03.388"/>
 </kw>
 <kw name="Give Username" library="resource">
 <arg>${user}</arg>
@@ -98,10 +98,10 @@
 <arg>id=user_login</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221207 03:26:08.930" level="INFO">Typing text '98013711' into text field 'id=user_login'.</msg>
-<status status="PASS" starttime="20221207 03:26:08.930" endtime="20221207 03:26:09.108"/>
+<msg timestamp="20221207 03:34:03.389" level="INFO">Typing text '98013711' into text field 'id=user_login'.</msg>
+<status status="PASS" starttime="20221207 03:34:03.388" endtime="20221207 03:34:03.569"/>
 </kw>
-<status status="PASS" starttime="20221207 03:26:08.929" endtime="20221207 03:26:09.108"/>
+<status status="PASS" starttime="20221207 03:34:03.388" endtime="20221207 03:34:03.570"/>
 </kw>
 <kw name="Give Password" library="resource">
 <arg>${pass}</arg>
@@ -109,33 +109,33 @@
 <arg>id=user_password</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221207 03:26:09.109" level="INFO">Typing text 'invali' into text field 'id=user_password'.</msg>
-<status status="PASS" starttime="20221207 03:26:09.108" endtime="20221207 03:26:09.215"/>
+<msg timestamp="20221207 03:34:03.570" level="INFO">Typing text 'invali' into text field 'id=user_password'.</msg>
+<status status="PASS" starttime="20221207 03:34:03.570" endtime="20221207 03:34:03.676"/>
 </kw>
-<status status="PASS" starttime="20221207 03:26:09.108" endtime="20221207 03:26:09.215"/>
+<status status="PASS" starttime="20221207 03:34:03.570" endtime="20221207 03:34:03.676"/>
 </kw>
 <kw name="Click the Login button" library="resource">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id=login_button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221207 03:26:09.216" level="INFO">Clicking button 'id=login_button'.</msg>
-<status status="PASS" starttime="20221207 03:26:09.216" endtime="20221207 03:26:09.307"/>
+<msg timestamp="20221207 03:34:03.677" level="INFO">Clicking button 'id=login_button'.</msg>
+<status status="PASS" starttime="20221207 03:34:03.677" endtime="20221207 03:34:03.763"/>
 </kw>
-<status status="PASS" starttime="20221207 03:26:09.216" endtime="20221207 03:26:09.307"/>
+<status status="PASS" starttime="20221207 03:34:03.676" endtime="20221207 03:34:03.763"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>MzadQatar Login</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221207 03:26:09.312" level="INFO">Page title is 'MzadQatar Login'.</msg>
-<status status="PASS" starttime="20221207 03:26:09.307" endtime="20221207 03:26:09.313"/>
+<msg timestamp="20221207 03:34:03.770" level="INFO">Page title is 'MzadQatar Login'.</msg>
+<status status="PASS" starttime="20221207 03:34:03.763" endtime="20221207 03:34:03.770"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221207 03:26:09.313" endtime="20221207 03:26:11.488"/>
+<status status="PASS" starttime="20221207 03:34:03.770" endtime="20221207 03:34:05.899"/>
 </kw>
-<status status="PASS" starttime="20221207 03:26:05.061" endtime="20221207 03:26:11.488"/>
+<status status="PASS" starttime="20221207 03:33:59.259" endtime="20221207 03:34:05.899"/>
 </kw>
-<status status="PASS" starttime="20221207 03:26:05.060" endtime="20221207 03:26:11.489"/>
+<status status="PASS" starttime="20221207 03:33:59.258" endtime="20221207 03:34:05.900"/>
 </test>
 <test id="s1-t3" name="Both invalid" line="10">
 <kw name="Login should fail" library="resource">
@@ -146,19 +146,19 @@
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221207 03:26:11.491" level="INFO">Opening browser 'Chrome' to base url 'https://en.mzadqatar.com/login'.</msg>
-<status status="PASS" starttime="20221207 03:26:11.491" endtime="20221207 03:26:15.642"/>
+<msg timestamp="20221207 03:34:05.902" level="INFO">Opening browser 'Chrome' to base url 'https://en.mzadqatar.com/login'.</msg>
+<status status="PASS" starttime="20221207 03:34:05.902" endtime="20221207 03:34:09.883"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221207 03:26:15.643" endtime="20221207 03:26:15.775"/>
+<status status="PASS" starttime="20221207 03:34:09.883" endtime="20221207 03:34:10.002"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>${DELAY}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20221207 03:26:15.776" endtime="20221207 03:26:15.776"/>
+<status status="PASS" starttime="20221207 03:34:10.003" endtime="20221207 03:34:10.003"/>
 </kw>
-<status status="PASS" starttime="20221207 03:26:11.491" endtime="20221207 03:26:15.777"/>
+<status status="PASS" starttime="20221207 03:34:05.902" endtime="20221207 03:34:10.003"/>
 </kw>
 <kw name="Give Username" library="resource">
 <arg>${user}</arg>
@@ -166,10 +166,10 @@
 <arg>id=user_login</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221207 03:26:15.778" level="INFO">Typing text 'Invalid' into text field 'id=user_login'.</msg>
-<status status="PASS" starttime="20221207 03:26:15.777" endtime="20221207 03:26:15.978"/>
+<msg timestamp="20221207 03:34:10.004" level="INFO">Typing text 'Invalid' into text field 'id=user_login'.</msg>
+<status status="PASS" starttime="20221207 03:34:10.004" endtime="20221207 03:34:10.200"/>
 </kw>
-<status status="PASS" starttime="20221207 03:26:15.777" endtime="20221207 03:26:15.978"/>
+<status status="PASS" starttime="20221207 03:34:10.003" endtime="20221207 03:34:10.200"/>
 </kw>
 <kw name="Give Password" library="resource">
 <arg>${pass}</arg>
@@ -177,33 +177,33 @@
 <arg>id=user_password</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221207 03:26:15.980" level="INFO">Typing text 'invalid' into text field 'id=user_password'.</msg>
-<status status="PASS" starttime="20221207 03:26:15.980" endtime="20221207 03:26:16.095"/>
+<msg timestamp="20221207 03:34:10.201" level="INFO">Typing text 'invalid' into text field 'id=user_password'.</msg>
+<status status="PASS" starttime="20221207 03:34:10.201" endtime="20221207 03:34:10.312"/>
 </kw>
-<status status="PASS" starttime="20221207 03:26:15.979" endtime="20221207 03:26:16.095"/>
+<status status="PASS" starttime="20221207 03:34:10.200" endtime="20221207 03:34:10.312"/>
 </kw>
 <kw name="Click the Login button" library="resource">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id=login_button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221207 03:26:16.096" level="INFO">Clicking button 'id=login_button'.</msg>
-<status status="PASS" starttime="20221207 03:26:16.096" endtime="20221207 03:26:16.217"/>
+<msg timestamp="20221207 03:34:10.313" level="INFO">Clicking button 'id=login_button'.</msg>
+<status status="PASS" starttime="20221207 03:34:10.313" endtime="20221207 03:34:10.417"/>
 </kw>
-<status status="PASS" starttime="20221207 03:26:16.095" endtime="20221207 03:26:16.217"/>
+<status status="PASS" starttime="20221207 03:34:10.313" endtime="20221207 03:34:10.417"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>MzadQatar Login</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221207 03:26:16.224" level="INFO">Page title is 'MzadQatar Login'.</msg>
-<status status="PASS" starttime="20221207 03:26:16.217" endtime="20221207 03:26:16.224"/>
+<msg timestamp="20221207 03:34:10.427" level="INFO">Page title is 'MzadQatar Login'.</msg>
+<status status="PASS" starttime="20221207 03:34:10.418" endtime="20221207 03:34:10.427"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221207 03:26:16.225" endtime="20221207 03:26:18.448"/>
+<status status="PASS" starttime="20221207 03:34:10.427" endtime="20221207 03:34:12.580"/>
 </kw>
-<status status="PASS" starttime="20221207 03:26:11.491" endtime="20221207 03:26:18.448"/>
+<status status="PASS" starttime="20221207 03:34:05.901" endtime="20221207 03:34:12.580"/>
 </kw>
-<status status="PASS" starttime="20221207 03:26:11.490" endtime="20221207 03:26:18.449"/>
+<status status="PASS" starttime="20221207 03:34:05.901" endtime="20221207 03:34:12.581"/>
 </test>
 <test id="s1-t4" name="Empty username" line="12">
 <kw name="Login should fail" library="resource">
@@ -214,19 +214,19 @@
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221207 03:26:18.454" level="INFO">Opening browser 'Chrome' to base url 'https://en.mzadqatar.com/login'.</msg>
-<status status="PASS" starttime="20221207 03:26:18.453" endtime="20221207 03:26:21.858"/>
+<msg timestamp="20221207 03:34:12.584" level="INFO">Opening browser 'Chrome' to base url 'https://en.mzadqatar.com/login'.</msg>
+<status status="PASS" starttime="20221207 03:34:12.583" endtime="20221207 03:34:15.999"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221207 03:26:21.858" endtime="20221207 03:26:21.979"/>
+<status status="PASS" starttime="20221207 03:34:15.999" endtime="20221207 03:34:16.117"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>${DELAY}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20221207 03:26:21.979" endtime="20221207 03:26:21.980"/>
+<status status="PASS" starttime="20221207 03:34:16.117" endtime="20221207 03:34:16.118"/>
 </kw>
-<status status="PASS" starttime="20221207 03:26:18.453" endtime="20221207 03:26:21.980"/>
+<status status="PASS" starttime="20221207 03:34:12.583" endtime="20221207 03:34:16.118"/>
 </kw>
 <kw name="Give Username" library="resource">
 <arg>${user}</arg>
@@ -234,10 +234,10 @@
 <arg>id=user_login</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221207 03:26:21.981" level="INFO">Typing text '' into text field 'id=user_login'.</msg>
-<status status="PASS" starttime="20221207 03:26:21.981" endtime="20221207 03:26:22.140"/>
+<msg timestamp="20221207 03:34:16.119" level="INFO">Typing text '' into text field 'id=user_login'.</msg>
+<status status="PASS" starttime="20221207 03:34:16.118" endtime="20221207 03:34:16.252"/>
 </kw>
-<status status="PASS" starttime="20221207 03:26:21.980" endtime="20221207 03:26:22.140"/>
+<status status="PASS" starttime="20221207 03:34:16.118" endtime="20221207 03:34:16.252"/>
 </kw>
 <kw name="Give Password" library="resource">
 <arg>${pass}</arg>
@@ -245,33 +245,33 @@
 <arg>id=user_password</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221207 03:26:22.141" level="INFO">Typing text 'Venom007' into text field 'id=user_password'.</msg>
-<status status="PASS" starttime="20221207 03:26:22.140" endtime="20221207 03:26:22.274"/>
+<msg timestamp="20221207 03:34:16.253" level="INFO">Typing text 'Venom007' into text field 'id=user_password'.</msg>
+<status status="PASS" starttime="20221207 03:34:16.253" endtime="20221207 03:34:16.383"/>
 </kw>
-<status status="PASS" starttime="20221207 03:26:22.140" endtime="20221207 03:26:22.274"/>
+<status status="PASS" starttime="20221207 03:34:16.253" endtime="20221207 03:34:16.384"/>
 </kw>
 <kw name="Click the Login button" library="resource">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id=login_button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221207 03:26:22.275" level="INFO">Clicking button 'id=login_button'.</msg>
-<status status="PASS" starttime="20221207 03:26:22.275" endtime="20221207 03:26:22.377"/>
+<msg timestamp="20221207 03:34:16.384" level="INFO">Clicking button 'id=login_button'.</msg>
+<status status="PASS" starttime="20221207 03:34:16.384" endtime="20221207 03:34:16.499"/>
 </kw>
-<status status="PASS" starttime="20221207 03:26:22.274" endtime="20221207 03:26:22.377"/>
+<status status="PASS" starttime="20221207 03:34:16.384" endtime="20221207 03:34:16.500"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>MzadQatar Login</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221207 03:26:22.389" level="INFO">Page title is 'MzadQatar Login'.</msg>
-<status status="PASS" starttime="20221207 03:26:22.378" endtime="20221207 03:26:22.389"/>
+<msg timestamp="20221207 03:34:16.506" level="INFO">Page title is 'MzadQatar Login'.</msg>
+<status status="PASS" starttime="20221207 03:34:16.500" endtime="20221207 03:34:16.507"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221207 03:26:22.389" endtime="20221207 03:26:24.546"/>
+<status status="PASS" starttime="20221207 03:34:16.508" endtime="20221207 03:34:18.670"/>
 </kw>
-<status status="PASS" starttime="20221207 03:26:18.451" endtime="20221207 03:26:24.546"/>
+<status status="PASS" starttime="20221207 03:34:12.583" endtime="20221207 03:34:18.670"/>
 </kw>
-<status status="PASS" starttime="20221207 03:26:18.451" endtime="20221207 03:26:24.547"/>
+<status status="PASS" starttime="20221207 03:34:12.582" endtime="20221207 03:34:18.671"/>
 </test>
 <test id="s1-t5" name="Empty password" line="15">
 <kw name="Login should fail" library="resource">
@@ -282,19 +282,19 @@
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221207 03:26:24.550" level="INFO">Opening browser 'Chrome' to base url 'https://en.mzadqatar.com/login'.</msg>
-<status status="PASS" starttime="20221207 03:26:24.549" endtime="20221207 03:26:27.679"/>
+<msg timestamp="20221207 03:34:18.676" level="INFO">Opening browser 'Chrome' to base url 'https://en.mzadqatar.com/login'.</msg>
+<status status="PASS" starttime="20221207 03:34:18.675" endtime="20221207 03:34:22.451"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221207 03:26:27.679" endtime="20221207 03:26:27.809"/>
+<status status="PASS" starttime="20221207 03:34:22.451" endtime="20221207 03:34:22.579"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>${DELAY}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20221207 03:26:27.809" endtime="20221207 03:26:27.809"/>
+<status status="PASS" starttime="20221207 03:34:22.580" endtime="20221207 03:34:22.580"/>
 </kw>
-<status status="PASS" starttime="20221207 03:26:24.549" endtime="20221207 03:26:27.809"/>
+<status status="PASS" starttime="20221207 03:34:18.675" endtime="20221207 03:34:22.581"/>
 </kw>
 <kw name="Give Username" library="resource">
 <arg>${user}</arg>
@@ -302,10 +302,10 @@
 <arg>id=user_login</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221207 03:26:27.810" level="INFO">Typing text '98013711' into text field 'id=user_login'.</msg>
-<status status="PASS" starttime="20221207 03:26:27.810" endtime="20221207 03:26:27.998"/>
+<msg timestamp="20221207 03:34:22.582" level="INFO">Typing text '98013711' into text field 'id=user_login'.</msg>
+<status status="PASS" starttime="20221207 03:34:22.581" endtime="20221207 03:34:22.809"/>
 </kw>
-<status status="PASS" starttime="20221207 03:26:27.809" endtime="20221207 03:26:27.998"/>
+<status status="PASS" starttime="20221207 03:34:22.581" endtime="20221207 03:34:22.809"/>
 </kw>
 <kw name="Give Password" library="resource">
 <arg>${pass}</arg>
@@ -313,33 +313,33 @@
 <arg>id=user_password</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221207 03:26:27.999" level="INFO">Typing text '' into text field 'id=user_password'.</msg>
-<status status="PASS" starttime="20221207 03:26:27.998" endtime="20221207 03:26:28.091"/>
+<msg timestamp="20221207 03:34:22.810" level="INFO">Typing text '' into text field 'id=user_password'.</msg>
+<status status="PASS" starttime="20221207 03:34:22.810" endtime="20221207 03:34:22.903"/>
 </kw>
-<status status="PASS" starttime="20221207 03:26:27.998" endtime="20221207 03:26:28.091"/>
+<status status="PASS" starttime="20221207 03:34:22.809" endtime="20221207 03:34:22.903"/>
 </kw>
 <kw name="Click the Login button" library="resource">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id=login_button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221207 03:26:28.093" level="INFO">Clicking button 'id=login_button'.</msg>
-<status status="PASS" starttime="20221207 03:26:28.092" endtime="20221207 03:26:28.193"/>
+<msg timestamp="20221207 03:34:22.904" level="INFO">Clicking button 'id=login_button'.</msg>
+<status status="PASS" starttime="20221207 03:34:22.904" endtime="20221207 03:34:23.011"/>
 </kw>
-<status status="PASS" starttime="20221207 03:26:28.091" endtime="20221207 03:26:28.193"/>
+<status status="PASS" starttime="20221207 03:34:22.903" endtime="20221207 03:34:23.011"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>MzadQatar Login</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221207 03:26:28.208" level="INFO">Page title is 'MzadQatar Login'.</msg>
-<status status="PASS" starttime="20221207 03:26:28.193" endtime="20221207 03:26:28.208"/>
+<msg timestamp="20221207 03:34:23.029" level="INFO">Page title is 'MzadQatar Login'.</msg>
+<status status="PASS" starttime="20221207 03:34:23.012" endtime="20221207 03:34:23.029"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221207 03:26:28.208" endtime="20221207 03:26:30.370"/>
+<status status="PASS" starttime="20221207 03:34:23.029" endtime="20221207 03:34:25.191"/>
 </kw>
-<status status="PASS" starttime="20221207 03:26:24.548" endtime="20221207 03:26:30.370"/>
+<status status="PASS" starttime="20221207 03:34:18.674" endtime="20221207 03:34:25.191"/>
 </kw>
-<status status="PASS" starttime="20221207 03:26:24.548" endtime="20221207 03:26:30.371"/>
+<status status="PASS" starttime="20221207 03:34:18.673" endtime="20221207 03:34:25.192"/>
 </test>
 <test id="s1-t6" name="Empty both" line="17">
 <kw name="Login should fail" library="resource">
@@ -350,19 +350,19 @@
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221207 03:26:30.374" level="INFO">Opening browser 'Chrome' to base url 'https://en.mzadqatar.com/login'.</msg>
-<status status="PASS" starttime="20221207 03:26:30.374" endtime="20221207 03:26:34.307"/>
+<msg timestamp="20221207 03:34:25.196" level="INFO">Opening browser 'Chrome' to base url 'https://en.mzadqatar.com/login'.</msg>
+<status status="PASS" starttime="20221207 03:34:25.196" endtime="20221207 03:34:29.241"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221207 03:26:34.307" endtime="20221207 03:26:34.441"/>
+<status status="PASS" starttime="20221207 03:34:29.241" endtime="20221207 03:34:29.367"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>${DELAY}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20221207 03:26:34.441" endtime="20221207 03:26:34.443"/>
+<status status="PASS" starttime="20221207 03:34:29.367" endtime="20221207 03:34:29.367"/>
 </kw>
-<status status="PASS" starttime="20221207 03:26:30.374" endtime="20221207 03:26:34.443"/>
+<status status="PASS" starttime="20221207 03:34:25.195" endtime="20221207 03:34:29.367"/>
 </kw>
 <kw name="Give Username" library="resource">
 <arg>${user}</arg>
@@ -370,10 +370,10 @@
 <arg>id=user_login</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221207 03:26:34.443" level="INFO">Typing text '' into text field 'id=user_login'.</msg>
-<status status="PASS" starttime="20221207 03:26:34.443" endtime="20221207 03:26:34.547"/>
+<msg timestamp="20221207 03:34:29.368" level="INFO">Typing text '' into text field 'id=user_login'.</msg>
+<status status="PASS" starttime="20221207 03:34:29.368" endtime="20221207 03:34:29.600"/>
 </kw>
-<status status="PASS" starttime="20221207 03:26:34.443" endtime="20221207 03:26:34.548"/>
+<status status="PASS" starttime="20221207 03:34:29.368" endtime="20221207 03:34:29.600"/>
 </kw>
 <kw name="Give Password" library="resource">
 <arg>${pass}</arg>
@@ -381,35 +381,35 @@
 <arg>id=user_password</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221207 03:26:34.548" level="INFO">Typing text '' into text field 'id=user_password'.</msg>
-<status status="PASS" starttime="20221207 03:26:34.548" endtime="20221207 03:26:34.640"/>
+<msg timestamp="20221207 03:34:29.601" level="INFO">Typing text '' into text field 'id=user_password'.</msg>
+<status status="PASS" starttime="20221207 03:34:29.600" endtime="20221207 03:34:29.702"/>
 </kw>
-<status status="PASS" starttime="20221207 03:26:34.548" endtime="20221207 03:26:34.640"/>
+<status status="PASS" starttime="20221207 03:34:29.600" endtime="20221207 03:34:29.702"/>
 </kw>
 <kw name="Click the Login button" library="resource">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id=login_button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221207 03:26:34.641" level="INFO">Clicking button 'id=login_button'.</msg>
-<status status="PASS" starttime="20221207 03:26:34.640" endtime="20221207 03:26:34.747"/>
+<msg timestamp="20221207 03:34:29.703" level="INFO">Clicking button 'id=login_button'.</msg>
+<status status="PASS" starttime="20221207 03:34:29.702" endtime="20221207 03:34:29.830"/>
 </kw>
-<status status="PASS" starttime="20221207 03:26:34.640" endtime="20221207 03:26:34.747"/>
+<status status="PASS" starttime="20221207 03:34:29.702" endtime="20221207 03:34:29.830"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>MzadQatar Login</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221207 03:26:34.757" level="INFO">Page title is 'MzadQatar Login'.</msg>
-<status status="PASS" starttime="20221207 03:26:34.747" endtime="20221207 03:26:34.757"/>
+<msg timestamp="20221207 03:34:29.844" level="INFO">Page title is 'MzadQatar Login'.</msg>
+<status status="PASS" starttime="20221207 03:34:29.830" endtime="20221207 03:34:29.845"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221207 03:26:34.758" endtime="20221207 03:26:36.925"/>
+<status status="PASS" starttime="20221207 03:34:29.845" endtime="20221207 03:34:32.001"/>
 </kw>
-<status status="PASS" starttime="20221207 03:26:30.373" endtime="20221207 03:26:36.925"/>
+<status status="PASS" starttime="20221207 03:34:25.195" endtime="20221207 03:34:32.001"/>
 </kw>
-<status status="PASS" starttime="20221207 03:26:30.372" endtime="20221207 03:26:36.926"/>
+<status status="PASS" starttime="20221207 03:34:25.194" endtime="20221207 03:34:32.002"/>
 </test>
-<status status="PASS" starttime="20221207 03:25:58.513" endtime="20221207 03:26:36.928"/>
+<status status="PASS" starttime="20221207 03:33:52.146" endtime="20221207 03:34:32.007"/>
 </suite>
 <statistics>
 <total>

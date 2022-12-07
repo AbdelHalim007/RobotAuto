@@ -14,7 +14,7 @@ pipeline {
      stage('UI Tests') {
      steps{
      bat 'start cmd.exe /c C:\\Users\\abdel\\OneDrive\\Bureau\\automation.bat'
-          sleep time: 10000, unit: 'MILLISECONDS'
+          sleep time: 40000, unit: 'MILLISECONDS'
 }
       }
 
