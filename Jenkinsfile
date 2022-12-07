@@ -9,6 +9,13 @@ pipeline {
     }
 
     stages {
+stage("Run UI tests ") {
+            steps {
+                dir('C:/Users/abdel/PycharmProjects/RobotFramework') {
+                bat 'robot ./Automation/TestSuits/Login/invalid_login.robot'
+            }}}
+
+
 
      stage('Tagging project image to Nexus') {
      steps{
@@ -54,6 +61,7 @@ stage("Docker Image ") {
                 echo 'Deploying....'
             }
             }
+
         stage("Email") {
             steps {
               emailext attachLog: true, body: '', subject: 'Jenkins Pipeline Report', to: 'abdlhalimbelkadhi@gmail.com'
