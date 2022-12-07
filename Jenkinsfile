@@ -13,9 +13,10 @@ pipeline {
 
      stage('UI') {
      steps{
-     bat 'start cmd.exe /c cd C:\\Users\\abdel\\PycharmProjects\\RobotFramework robot .\\Automation\\TestSuits\\Login\\invalid_login.robot'
+     bat 'start cmd.exe /c cd C:\\Users\\abdel\\PycharmProjects\\RobotFramework /c robot .\\Automation\\TestSuits\\Login\\invalid_login.robots'
 
         }
+      }
 
 
 
