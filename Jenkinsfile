@@ -11,11 +11,11 @@ pipeline {
     stages {
 
 
-     stage('UI') {
+     stage('UI Tests') {
      steps{
      bat 'start cmd.exe /c C:\\Users\\abdel\\OneDrive\\Bureau\\automation.bat'
-          options { quietPeriod(30) }
-             }
+          sleep time: 10000, unit: 'MILLISECONDS'
+}
       }
 
      stage('Tagging project image to Nexus') {
