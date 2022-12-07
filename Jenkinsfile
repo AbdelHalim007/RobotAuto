@@ -9,11 +9,20 @@ pipeline {
     }
 
     stages {
-stage("Run UI tests ") {
-            script {
-                dir('C:/Users/abdel/PycharmProjects/RobotFramework') {
-                bat 'robot ./Automation/TestSuits/Login/invalid_login.robot'
-            }}}
+
+
+     stage('UI') {
+     steps{
+         script {
+             dir('C:/Users/abdel/PycharmProjects/RobotFramework')  {
+
+    bat 'robot ./Automation/TestSuits/Login/invalid_login.robot'
+          }
+        }
+      }
+    }
+
+
 
 
 
