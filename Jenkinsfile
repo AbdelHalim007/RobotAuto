@@ -10,12 +10,24 @@ pipeline {
 
     stages {
 
-     stage('Uploading project image to Nexus') {
+     stage('Tagging project image to Nexus') {
      steps{
          script {
              dir('C:/Users/abdel/PycharmProjects/RobotFramework')  {
              docker.withRegistry('http://'+ registry, registryCredentials ) {
                 bat 'docker tag start7 192.168.1.101:8086/start7'
+
+          }}
+        }
+      }
+    }
+
+  stage('Uploading project image to Nexus') {
+     steps{
+         script {
+             dir('C:/Users/abdel/PycharmProjects/RobotFramework')  {
+             docker.withRegistry('http://'+ registry, registryCredentials ) {
+
                 bat 'docker push 192.168.1.101:8086/start7'
           }}
         }
@@ -34,31 +46,17 @@ stage("Docker Image ") {
                 dir('C:/Users/abdel/PycharmProjects/RobotFramework') {
                 bat 'docker build .  -t start'
             }}}
-        stage('Run Robot code') {
-            steps {
-                echo 'Building..'
-            }
-        }
 
 
-        stage('Running container') {
-            steps {
-                echo 'Deploying....'
-            }
-            }
-        stage('Build Docker Image') {
-            steps {
-                echo 'Deploying....'
-            }
-            }
+
         stage('Send Slack notification') {
             steps {
                 echo 'Deploying....'
             }
             }
-        stage('Send email') {
+        stage("Email") {
             steps {
-                echo 'Deploying....'
+              emailext attachLog: true, body: '', subject: 'Jenkins Pipeline Report', to: 'abdlhalimbelkadhi@gmail.com'
             }
         }
     }
