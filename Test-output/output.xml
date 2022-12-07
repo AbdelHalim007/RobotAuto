@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.10.2 on win32)" generated="20221118 14:48:34.037" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0 (Python 3.10.2 on win32)" generated="20221207 02:36:53.808" rpa="false" schemaversion="3">
 <suite id="s1" name="Invalid Login" source="C:\Users\abdel\PycharmProjects\RobotFramework\Automation\TestSuits\Login\invalid_login.robot">
 <test id="s1-t1" name="Invalid_username" line="6">
 <kw name="Login should fail" library="resource">
@@ -10,51 +10,64 @@
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221118 14:48:34.598" level="INFO">Opening browser 'Chrome' to base url 'https://en.mzadqatar.com/login'.</msg>
-<msg timestamp="20221118 14:48:44.425" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9D7A230&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5a2d5d0ca2cb25aae48c7858251235df/screenshot</msg>
-<msg timestamp="20221118 14:48:48.503" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9D7A410&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5a2d5d0ca2cb25aae48c7858251235df/screenshot</msg>
-<msg timestamp="20221118 14:48:52.560" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9D7A560&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5a2d5d0ca2cb25aae48c7858251235df/screenshot</msg>
-<msg timestamp="20221118 14:48:56.663" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=65518): Max retries exceeded with url: /session/5a2d5d0ca2cb25aae48c7858251235df/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9D7A6B0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</msg>
-<msg timestamp="20221118 14:48:56.664" level="FAIL">ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))</msg>
-<status status="FAIL" starttime="20221118 14:48:34.598" endtime="20221118 14:48:56.715"/>
+<msg timestamp="20221207 02:36:54.492" level="INFO">Opening browser 'Chrome' to base url 'https://en.mzadqatar.com/login'.</msg>
+<status status="PASS" starttime="20221207 02:36:54.492" endtime="20221207 02:36:59.581"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="NOT RUN" starttime="20221118 14:48:56.715" endtime="20221118 14:48:56.715"/>
+<status status="PASS" starttime="20221207 02:36:59.581" endtime="20221207 02:36:59.736"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>${DELAY}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="NOT RUN" starttime="20221118 14:48:56.716" endtime="20221118 14:48:56.716"/>
+<status status="PASS" starttime="20221207 02:36:59.736" endtime="20221207 02:36:59.737"/>
 </kw>
-<status status="FAIL" starttime="20221118 14:48:34.598" endtime="20221118 14:48:56.716"/>
+<status status="PASS" starttime="20221207 02:36:54.492" endtime="20221207 02:36:59.737"/>
 </kw>
 <kw name="Give Username" library="resource">
 <arg>${user}</arg>
-<status status="NOT RUN" starttime="20221118 14:48:56.716" endtime="20221118 14:48:56.716"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user_login</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221207 02:36:59.739" level="INFO">Typing text 'invalid' into text field 'id=user_login'.</msg>
+<status status="PASS" starttime="20221207 02:36:59.738" endtime="20221207 02:36:59.993"/>
+</kw>
+<status status="PASS" starttime="20221207 02:36:59.737" endtime="20221207 02:36:59.993"/>
 </kw>
 <kw name="Give Password" library="resource">
 <arg>${pass}</arg>
-<status status="NOT RUN" starttime="20221118 14:48:56.716" endtime="20221118 14:48:56.716"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user_password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221207 02:36:59.993" level="INFO">Typing text 'Venom007' into text field 'id=user_password'.</msg>
+<status status="PASS" starttime="20221207 02:36:59.993" endtime="20221207 02:37:00.145"/>
+</kw>
+<status status="PASS" starttime="20221207 02:36:59.993" endtime="20221207 02:37:00.145"/>
 </kw>
 <kw name="Click the Login button" library="resource">
-<status status="NOT RUN" starttime="20221118 14:48:56.716" endtime="20221118 14:48:56.716"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=login_button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221207 02:37:00.153" level="INFO">Clicking button 'id=login_button'.</msg>
+<status status="PASS" starttime="20221207 02:37:00.145" endtime="20221207 02:37:00.280"/>
+</kw>
+<status status="PASS" starttime="20221207 02:37:00.145" endtime="20221207 02:37:00.280"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>MzadQatar Login</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="NOT RUN" starttime="20221118 14:48:56.716" endtime="20221118 14:48:56.716"/>
+<msg timestamp="20221207 02:37:00.288" level="INFO">Page title is 'MzadQatar Login'.</msg>
+<status status="PASS" starttime="20221207 02:37:00.280" endtime="20221207 02:37:00.288"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<msg timestamp="20221118 14:49:00.785" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9D7AFB0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5a2d5d0ca2cb25aae48c7858251235df</msg>
-<msg timestamp="20221118 14:49:04.864" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9D7B0A0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5a2d5d0ca2cb25aae48c7858251235df</msg>
-<msg timestamp="20221118 14:49:08.915" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9D7B1F0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5a2d5d0ca2cb25aae48c7858251235df</msg>
-<status status="PASS" starttime="20221118 14:48:56.717" endtime="20221118 14:49:17.065"/>
+<status status="PASS" starttime="20221207 02:37:00.288" endtime="20221207 02:37:02.457"/>
 </kw>
-<status status="FAIL" starttime="20221118 14:48:34.598" endtime="20221118 14:49:17.065"/>
+<status status="PASS" starttime="20221207 02:36:54.492" endtime="20221207 02:37:02.457"/>
 </kw>
-<status status="FAIL" starttime="20221118 14:48:34.597" endtime="20221118 14:49:17.066">ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))</status>
+<status status="PASS" starttime="20221207 02:36:54.492" endtime="20221207 02:37:02.457"/>
 </test>
 <test id="s1-t2" name="Invalid_password" line="8">
 <kw name="Login should fail" library="resource">
@@ -65,51 +78,64 @@
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221118 14:49:17.068" level="INFO">Opening browser 'Chrome' to base url 'https://en.mzadqatar.com/login'.</msg>
-<msg timestamp="20221118 14:49:26.421" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9ED8880&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/7b2f32b21ca62c9b6105047ec760cb4f/screenshot</msg>
-<msg timestamp="20221118 14:49:30.490" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9ED8A60&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/7b2f32b21ca62c9b6105047ec760cb4f/screenshot</msg>
-<msg timestamp="20221118 14:49:34.544" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9ED8C10&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/7b2f32b21ca62c9b6105047ec760cb4f/screenshot</msg>
-<msg timestamp="20221118 14:49:38.607" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=49182): Max retries exceeded with url: /session/7b2f32b21ca62c9b6105047ec760cb4f/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9ED8D60&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</msg>
-<msg timestamp="20221118 14:49:38.607" level="FAIL">ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))</msg>
-<status status="FAIL" starttime="20221118 14:49:17.068" endtime="20221118 14:49:38.609"/>
+<msg timestamp="20221207 02:37:02.457" level="INFO">Opening browser 'Chrome' to base url 'https://en.mzadqatar.com/login'.</msg>
+<status status="PASS" starttime="20221207 02:37:02.457" endtime="20221207 02:37:07.080"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="NOT RUN" starttime="20221118 14:49:38.609" endtime="20221118 14:49:38.609"/>
+<status status="PASS" starttime="20221207 02:37:07.080" endtime="20221207 02:37:07.216"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>${DELAY}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="NOT RUN" starttime="20221118 14:49:38.609" endtime="20221118 14:49:38.609"/>
+<status status="PASS" starttime="20221207 02:37:07.216" endtime="20221207 02:37:07.224"/>
 </kw>
-<status status="FAIL" starttime="20221118 14:49:17.067" endtime="20221118 14:49:38.610"/>
+<status status="PASS" starttime="20221207 02:37:02.457" endtime="20221207 02:37:07.224"/>
 </kw>
 <kw name="Give Username" library="resource">
 <arg>${user}</arg>
-<status status="NOT RUN" starttime="20221118 14:49:38.610" endtime="20221118 14:49:38.610"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user_login</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221207 02:37:07.224" level="INFO">Typing text '98013711' into text field 'id=user_login'.</msg>
+<status status="PASS" starttime="20221207 02:37:07.224" endtime="20221207 02:37:07.449"/>
+</kw>
+<status status="PASS" starttime="20221207 02:37:07.224" endtime="20221207 02:37:07.449"/>
 </kw>
 <kw name="Give Password" library="resource">
 <arg>${pass}</arg>
-<status status="NOT RUN" starttime="20221118 14:49:38.610" endtime="20221118 14:49:38.610"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user_password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221207 02:37:07.449" level="INFO">Typing text 'invali' into text field 'id=user_password'.</msg>
+<status status="PASS" starttime="20221207 02:37:07.449" endtime="20221207 02:37:07.609"/>
+</kw>
+<status status="PASS" starttime="20221207 02:37:07.449" endtime="20221207 02:37:07.609"/>
 </kw>
 <kw name="Click the Login button" library="resource">
-<status status="NOT RUN" starttime="20221118 14:49:38.610" endtime="20221118 14:49:38.610"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=login_button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221207 02:37:07.609" level="INFO">Clicking button 'id=login_button'.</msg>
+<status status="PASS" starttime="20221207 02:37:07.609" endtime="20221207 02:37:07.737"/>
+</kw>
+<status status="PASS" starttime="20221207 02:37:07.609" endtime="20221207 02:37:07.737"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>MzadQatar Login</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="NOT RUN" starttime="20221118 14:49:38.610" endtime="20221118 14:49:38.610"/>
+<msg timestamp="20221207 02:37:07.745" level="INFO">Page title is 'MzadQatar Login'.</msg>
+<status status="PASS" starttime="20221207 02:37:07.737" endtime="20221207 02:37:07.745"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<msg timestamp="20221118 14:49:42.681" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9ED9660&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/7b2f32b21ca62c9b6105047ec760cb4f</msg>
-<msg timestamp="20221118 14:49:46.750" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9ED9750&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/7b2f32b21ca62c9b6105047ec760cb4f</msg>
-<msg timestamp="20221118 14:49:50.832" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9ED98A0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/7b2f32b21ca62c9b6105047ec760cb4f</msg>
-<status status="PASS" starttime="20221118 14:49:38.610" endtime="20221118 14:49:58.987"/>
+<status status="PASS" starttime="20221207 02:37:07.745" endtime="20221207 02:37:09.914"/>
 </kw>
-<status status="FAIL" starttime="20221118 14:49:17.066" endtime="20221118 14:49:58.987"/>
+<status status="PASS" starttime="20221207 02:37:02.457" endtime="20221207 02:37:09.914"/>
 </kw>
-<status status="FAIL" starttime="20221118 14:49:17.066" endtime="20221118 14:49:58.988">ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))</status>
+<status status="PASS" starttime="20221207 02:37:02.457" endtime="20221207 02:37:09.914"/>
 </test>
 <test id="s1-t3" name="Both invalid" line="10">
 <kw name="Login should fail" library="resource">
@@ -120,19 +146,19 @@
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221118 14:49:58.989" level="INFO">Opening browser 'Chrome' to base url 'https://en.mzadqatar.com/login'.</msg>
-<status status="PASS" starttime="20221118 14:49:58.989" endtime="20221118 14:50:06.226"/>
+<msg timestamp="20221207 02:37:09.914" level="INFO">Opening browser 'Chrome' to base url 'https://en.mzadqatar.com/login'.</msg>
+<status status="PASS" starttime="20221207 02:37:09.914" endtime="20221207 02:37:14.068"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221118 14:50:06.226" endtime="20221118 14:50:06.354"/>
+<status status="PASS" starttime="20221207 02:37:14.068" endtime="20221207 02:37:14.196"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>${DELAY}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20221118 14:50:06.354" endtime="20221118 14:50:06.355"/>
+<status status="PASS" starttime="20221207 02:37:14.196" endtime="20221207 02:37:14.196"/>
 </kw>
-<status status="PASS" starttime="20221118 14:49:58.989" endtime="20221118 14:50:06.355"/>
+<status status="PASS" starttime="20221207 02:37:09.914" endtime="20221207 02:37:14.196"/>
 </kw>
 <kw name="Give Username" library="resource">
 <arg>${user}</arg>
@@ -140,10 +166,10 @@
 <arg>id=user_login</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221118 14:50:06.355" level="INFO">Typing text 'Invalid' into text field 'id=user_login'.</msg>
-<status status="PASS" starttime="20221118 14:50:06.355" endtime="20221118 14:50:06.468"/>
+<msg timestamp="20221207 02:37:14.196" level="INFO">Typing text 'Invalid' into text field 'id=user_login'.</msg>
+<status status="PASS" starttime="20221207 02:37:14.196" endtime="20221207 02:37:14.444"/>
 </kw>
-<status status="PASS" starttime="20221118 14:50:06.355" endtime="20221118 14:50:06.469"/>
+<status status="PASS" starttime="20221207 02:37:14.196" endtime="20221207 02:37:14.444"/>
 </kw>
 <kw name="Give Password" library="resource">
 <arg>${pass}</arg>
@@ -151,33 +177,33 @@
 <arg>id=user_password</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221118 14:50:06.469" level="INFO">Typing text 'invalid' into text field 'id=user_password'.</msg>
-<status status="PASS" starttime="20221118 14:50:06.469" endtime="20221118 14:50:06.574"/>
+<msg timestamp="20221207 02:37:14.444" level="INFO">Typing text 'invalid' into text field 'id=user_password'.</msg>
+<status status="PASS" starttime="20221207 02:37:14.444" endtime="20221207 02:37:14.580"/>
 </kw>
-<status status="PASS" starttime="20221118 14:50:06.469" endtime="20221118 14:50:06.574"/>
+<status status="PASS" starttime="20221207 02:37:14.444" endtime="20221207 02:37:14.580"/>
 </kw>
 <kw name="Click the Login button" library="resource">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id=login_button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221118 14:50:06.575" level="INFO">Clicking button 'id=login_button'.</msg>
-<status status="PASS" starttime="20221118 14:50:06.575" endtime="20221118 14:50:06.655"/>
+<msg timestamp="20221207 02:37:14.580" level="INFO">Clicking button 'id=login_button'.</msg>
+<status status="PASS" starttime="20221207 02:37:14.580" endtime="20221207 02:37:14.694"/>
 </kw>
-<status status="PASS" starttime="20221118 14:50:06.574" endtime="20221118 14:50:06.655"/>
+<status status="PASS" starttime="20221207 02:37:14.580" endtime="20221207 02:37:14.694"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>MzadQatar Login</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221118 14:50:06.660" level="INFO">Page title is 'MzadQatar Login'.</msg>
-<status status="PASS" starttime="20221118 14:50:06.655" endtime="20221118 14:50:06.660"/>
+<msg timestamp="20221207 02:37:14.710" level="INFO">Page title is 'MzadQatar Login'.</msg>
+<status status="PASS" starttime="20221207 02:37:14.694" endtime="20221207 02:37:14.710"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221118 14:50:06.660" endtime="20221118 14:50:08.772"/>
+<status status="PASS" starttime="20221207 02:37:14.710" endtime="20221207 02:37:16.851"/>
 </kw>
-<status status="PASS" starttime="20221118 14:49:58.988" endtime="20221118 14:50:08.773"/>
+<status status="PASS" starttime="20221207 02:37:09.914" endtime="20221207 02:37:16.851"/>
 </kw>
-<status status="PASS" starttime="20221118 14:49:58.988" endtime="20221118 14:50:08.773"/>
+<status status="PASS" starttime="20221207 02:37:09.914" endtime="20221207 02:37:16.851"/>
 </test>
 <test id="s1-t4" name="Empty username" line="12">
 <kw name="Login should fail" library="resource">
@@ -188,51 +214,64 @@
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221118 14:50:08.775" level="INFO">Opening browser 'Chrome' to base url 'https://en.mzadqatar.com/login'.</msg>
-<msg timestamp="20221118 14:50:17.430" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9EFC430&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/3057ea503a48a4307b21ba40aef629c4/screenshot</msg>
-<msg timestamp="20221118 14:50:21.506" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9EFCA60&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/3057ea503a48a4307b21ba40aef629c4/screenshot</msg>
-<msg timestamp="20221118 14:50:25.591" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9D7B2B0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/3057ea503a48a4307b21ba40aef629c4/screenshot</msg>
-<msg timestamp="20221118 14:50:29.642" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=49270): Max retries exceeded with url: /session/3057ea503a48a4307b21ba40aef629c4/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9EDA650&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</msg>
-<msg timestamp="20221118 14:50:29.642" level="FAIL">ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))</msg>
-<status status="FAIL" starttime="20221118 14:50:08.775" endtime="20221118 14:50:29.644"/>
+<msg timestamp="20221207 02:37:16.851" level="INFO">Opening browser 'Chrome' to base url 'https://en.mzadqatar.com/login'.</msg>
+<status status="PASS" starttime="20221207 02:37:16.851" endtime="20221207 02:37:20.950"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="NOT RUN" starttime="20221118 14:50:29.644" endtime="20221118 14:50:29.644"/>
+<status status="PASS" starttime="20221207 02:37:20.950" endtime="20221207 02:37:21.086"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>${DELAY}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="NOT RUN" starttime="20221118 14:50:29.644" endtime="20221118 14:50:29.644"/>
+<status status="PASS" starttime="20221207 02:37:21.086" endtime="20221207 02:37:21.086"/>
 </kw>
-<status status="FAIL" starttime="20221118 14:50:08.774" endtime="20221118 14:50:29.645"/>
+<status status="PASS" starttime="20221207 02:37:16.851" endtime="20221207 02:37:21.086"/>
 </kw>
 <kw name="Give Username" library="resource">
 <arg>${user}</arg>
-<status status="NOT RUN" starttime="20221118 14:50:29.645" endtime="20221118 14:50:29.645"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user_login</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221207 02:37:21.086" level="INFO">Typing text '' into text field 'id=user_login'.</msg>
+<status status="PASS" starttime="20221207 02:37:21.086" endtime="20221207 02:37:21.246"/>
+</kw>
+<status status="PASS" starttime="20221207 02:37:21.086" endtime="20221207 02:37:21.246"/>
 </kw>
 <kw name="Give Password" library="resource">
 <arg>${pass}</arg>
-<status status="NOT RUN" starttime="20221118 14:50:29.645" endtime="20221118 14:50:29.645"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user_password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221207 02:37:21.246" level="INFO">Typing text 'Venom007' into text field 'id=user_password'.</msg>
+<status status="PASS" starttime="20221207 02:37:21.246" endtime="20221207 02:37:21.419"/>
+</kw>
+<status status="PASS" starttime="20221207 02:37:21.246" endtime="20221207 02:37:21.419"/>
 </kw>
 <kw name="Click the Login button" library="resource">
-<status status="NOT RUN" starttime="20221118 14:50:29.645" endtime="20221118 14:50:29.645"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=login_button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221207 02:37:21.419" level="INFO">Clicking button 'id=login_button'.</msg>
+<status status="PASS" starttime="20221207 02:37:21.419" endtime="20221207 02:37:21.579"/>
+</kw>
+<status status="PASS" starttime="20221207 02:37:21.419" endtime="20221207 02:37:21.579"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>MzadQatar Login</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="NOT RUN" starttime="20221118 14:50:29.645" endtime="20221118 14:50:29.645"/>
+<msg timestamp="20221207 02:37:21.595" level="INFO">Page title is 'MzadQatar Login'.</msg>
+<status status="PASS" starttime="20221207 02:37:21.579" endtime="20221207 02:37:21.595"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<msg timestamp="20221118 14:50:33.691" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9EDAEC0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/3057ea503a48a4307b21ba40aef629c4</msg>
-<msg timestamp="20221118 14:50:37.788" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9EDAB90&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/3057ea503a48a4307b21ba40aef629c4</msg>
-<msg timestamp="20221118 14:50:41.879" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9ED9A20&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/3057ea503a48a4307b21ba40aef629c4</msg>
-<status status="PASS" starttime="20221118 14:50:29.645" endtime="20221118 14:50:49.957"/>
+<status status="PASS" starttime="20221207 02:37:21.595" endtime="20221207 02:37:23.746"/>
 </kw>
-<status status="FAIL" starttime="20221118 14:50:08.774" endtime="20221118 14:50:49.957"/>
+<status status="PASS" starttime="20221207 02:37:16.851" endtime="20221207 02:37:23.746"/>
 </kw>
-<status status="FAIL" starttime="20221118 14:50:08.774" endtime="20221118 14:50:49.958">ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))</status>
+<status status="PASS" starttime="20221207 02:37:16.851" endtime="20221207 02:37:23.746"/>
 </test>
 <test id="s1-t5" name="Empty password" line="15">
 <kw name="Login should fail" library="resource">
@@ -243,116 +282,123 @@
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221118 14:50:49.959" level="INFO">Opening browser 'Chrome' to base url 'https://en.mzadqatar.com/login'.</msg>
-<status status="PASS" starttime="20221118 14:50:49.959" endtime="20221118 14:50:55.420"/>
+<msg timestamp="20221207 02:37:23.746" level="INFO">Opening browser 'Chrome' to base url 'https://en.mzadqatar.com/login'.</msg>
+<status status="PASS" starttime="20221207 02:37:23.746" endtime="20221207 02:37:28.228"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<msg timestamp="20221118 14:50:55.425" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=107.0.5304.107)
-Stacktrace:
-Backtrace:
-	Ordinal0 [0x00B5ACD3+2075859]
-	Ordinal0 [0x00AEEE61+1633889]
-	Ordinal0 [0x009EB7BD+571325]
-	Ordinal0 [0x009D2E1A+470554]
-	Ordinal0 [0x00A3AA0B+895499]
-	Ordinal0 [0x00A4AC96+961686]
-	Ordinal0 [0x00A37136+880950]
-	Ordinal0 [0x00A0FEFD+720637]
-	Ordinal0 [0x00A10F3F+724799]
-	GetHandleVerifier [0x00E0EED2+2769538]
-	GetHandleVerifier [0x00E00D95+2711877]
-	GetHandleVerifier [0x00BEA03A+521194]
-	GetHandleVerifier [0x00BE8DA0+516432]
-	Ordinal0 [0x00AF682C+1665068]
-	Ordinal0 [0x00AFB128+1683752]
-	Ordinal0 [0x00AFB215+1683989]
-	Ordinal0 [0x00B06484+1729668]
-	BaseThreadInitThunk [0x75B9FA29+25]
-	RtlGetAppContainerNamedObjectPath [0x77437A9E+286]
-	RtlGetAppContainerNamedObjectPath [0x77437A6E+238]
-</msg>
-<msg timestamp="20221118 14:50:55.425" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=107.0.5304.107)
-Stacktrace:
-Backtrace:
-	Ordinal0 [0x00B5ACD3+2075859]
-	Ordinal0 [0x00AEEE61+1633889]
-	Ordinal0 [0x009EB7BD+571325]
-	Ordinal0 [0x009D2E1A+470554]
-	Ordinal0 [0x00A3AA0B+895499]
-	Ordinal0 [0x00A4AC96+961686]
-	Ordinal0 [0x00A37136+880950]
-	Ordinal0 [0x00A0FEFD+720637]
-	Ordinal0 [0x00A10F3F+724799]
-	GetHandleVerifier [0x00E0EED2+2769538]
-	GetHandleVerifier [0x00E00D95+2711877]
-	GetHandleVerifier [0x00BEA03A+521194]
-	GetHandleVerifier [0x00BE8DA0+516432]
-	Ordinal0 [0x00AF682C+1665068]
-	Ordinal0 [0x00AFB128+1683752]
-	Ordinal0 [0x00AFB215+1683989]
-	Ordinal0 [0x00B06484+1729668]
-	BaseThreadInitThunk [0x75B9FA29+25]
-	RtlGetAppContainerNamedObjectPath [0x77437A9E+286]
-	RtlGetAppContainerNamedObjectPath [0x77437A6E+238]
-</msg>
-<status status="FAIL" starttime="20221118 14:50:55.420" endtime="20221118 14:50:55.435"/>
+<status status="PASS" starttime="20221207 02:37:28.228" endtime="20221207 02:37:28.372"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>${DELAY}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="NOT RUN" starttime="20221118 14:50:55.436" endtime="20221118 14:50:55.436"/>
+<status status="PASS" starttime="20221207 02:37:28.372" endtime="20221207 02:37:28.372"/>
 </kw>
-<status status="FAIL" starttime="20221118 14:50:49.959" endtime="20221118 14:50:55.436"/>
+<status status="PASS" starttime="20221207 02:37:23.746" endtime="20221207 02:37:28.372"/>
 </kw>
 <kw name="Give Username" library="resource">
 <arg>${user}</arg>
-<status status="NOT RUN" starttime="20221118 14:50:55.437" endtime="20221118 14:50:55.437"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user_login</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221207 02:37:28.372" level="INFO">Typing text '98013711' into text field 'id=user_login'.</msg>
+<msg timestamp="20221207 02:37:28.520" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=108.0.5359.95)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x004DACD3+2075859]
+	Ordinal0 [0x0046EE61+1633889]
+	Ordinal0 [0x0036B7BD+571325]
+	Ordinal0 [0x00352E1A+470554]
+	Ordinal0 [0x003BAA0B+895499]
+	Ordinal0 [0x003CAC96+961686]
+	Ordinal0 [0x003B7136+880950]
+	Ordinal0 [0x0038FEFD+720637]
+	Ordinal0 [0x00390F3F+724799]
+	GetHandleVerifier [0x0078EED2+2769538]
+	GetHandleVerifier [0x00780D95+2711877]
+	GetHandleVerifier [0x0056A03A+521194]
+	GetHandleVerifier [0x00568DA0+516432]
+	Ordinal0 [0x0047682C+1665068]
+	Ordinal0 [0x0047B128+1683752]
+	Ordinal0 [0x0047B215+1683989]
+	Ordinal0 [0x00486484+1729668]
+	BaseThreadInitThunk [0x75B9FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77437A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77437A6E+238]
+</msg>
+<msg timestamp="20221207 02:37:28.521" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=108.0.5359.95)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x004DACD3+2075859]
+	Ordinal0 [0x0046EE61+1633889]
+	Ordinal0 [0x0036B7BD+571325]
+	Ordinal0 [0x00352E1A+470554]
+	Ordinal0 [0x003BAA0B+895499]
+	Ordinal0 [0x003CAC96+961686]
+	Ordinal0 [0x003B7136+880950]
+	Ordinal0 [0x0038FEFD+720637]
+	Ordinal0 [0x00390F3F+724799]
+	GetHandleVerifier [0x0078EED2+2769538]
+	GetHandleVerifier [0x00780D95+2711877]
+	GetHandleVerifier [0x0056A03A+521194]
+	GetHandleVerifier [0x00568DA0+516432]
+	Ordinal0 [0x0047682C+1665068]
+	Ordinal0 [0x0047B128+1683752]
+	Ordinal0 [0x0047B215+1683989]
+	Ordinal0 [0x00486484+1729668]
+	BaseThreadInitThunk [0x75B9FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77437A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77437A6E+238]
+</msg>
+<status status="FAIL" starttime="20221207 02:37:28.372" endtime="20221207 02:37:28.572"/>
+</kw>
+<status status="FAIL" starttime="20221207 02:37:28.372" endtime="20221207 02:37:28.573"/>
 </kw>
 <kw name="Give Password" library="resource">
 <arg>${pass}</arg>
-<status status="NOT RUN" starttime="20221118 14:50:55.437" endtime="20221118 14:50:55.437"/>
+<status status="NOT RUN" starttime="20221207 02:37:28.573" endtime="20221207 02:37:28.573"/>
 </kw>
 <kw name="Click the Login button" library="resource">
-<status status="NOT RUN" starttime="20221118 14:50:55.437" endtime="20221118 14:50:55.437"/>
+<status status="NOT RUN" starttime="20221207 02:37:28.573" endtime="20221207 02:37:28.573"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>MzadQatar Login</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="NOT RUN" starttime="20221118 14:50:55.437" endtime="20221118 14:50:55.437"/>
+<status status="NOT RUN" starttime="20221207 02:37:28.573" endtime="20221207 02:37:28.574"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221118 14:50:55.437" endtime="20221118 14:50:57.539"/>
+<status status="PASS" starttime="20221207 02:37:28.574" endtime="20221207 02:37:30.699"/>
 </kw>
-<status status="FAIL" starttime="20221118 14:50:49.958" endtime="20221118 14:50:57.539"/>
+<status status="FAIL" starttime="20221207 02:37:23.746" endtime="20221207 02:37:30.699"/>
 </kw>
-<status status="FAIL" starttime="20221118 14:50:49.958" endtime="20221118 14:50:57.540">NoSuchWindowException: Message: no such window: target window already closed
+<status status="FAIL" starttime="20221207 02:37:23.746" endtime="20221207 02:37:30.699">NoSuchWindowException: Message: no such window: target window already closed
 from unknown error: web view not found
-  (Session info: chrome=107.0.5304.107)
+  (Session info: chrome=108.0.5359.95)
 Stacktrace:
 Backtrace:
-	Ordinal0 [0x00B5ACD3+2075859]
-	Ordinal0 [0x00AEEE61+1633889]
-	Ordinal0 [0x009EB7BD+571325]
-	Ordinal0 [0x009D2E1A+470554]
-	Ordinal0 [0x00A3AA0B+895499]
-	Ordinal0 [0x00A4AC96+961686]
-	Ordinal0 [0x00A37136+880950]
-	Ordinal0 [0x00A0FEFD+720637]
-	Ordinal0 [0x00A10F3F+724799]
-	GetHandleVerifier [0x00E0EED2+2769538]
-	GetHandleVerifier [0x00E00D95+2711877]
-	GetHandleVerifier [0x00BEA03A+521194]
-	GetHandleVerifier [0x00BE8DA0+516432]
-	Ordinal0 [0x00AF682C+1665068]
-	Ordinal0 [0x00AFB128+1683752]
-	Ordinal0 [0x00AFB215+1683989]
-	Ordinal0 [0x00B06484+1729668]
+	Ordinal0 [0x004DACD3+2075859]
+	Ordinal0 [0x0046EE61+1633889]
+	Ordinal0 [0x0036B7BD+571325]
+	Ordinal0 [0x00352E1A+470554]
+	Ordinal0 [0x003BAA0B+895499]
+	Ordinal0 [0x003CAC96+961686]
+	Ordinal0 [0x003B7136+880950]
+	Ordinal0 [0x0038FEFD+720637]
+	Ordinal0 [0x00390F3F+724799]
+	GetHandleVerifier [0x0078EED2+2769538]
+	GetHandleVerifier [0x00780D95+2711877]
+	GetHandleVerifier [0x0056A03A+521194]
+	GetHandleVerifier [0x00568DA0+516432]
+	Ordinal0 [0x0047682C+1665068]
+	Ordinal0 [0x0047B128+1683752]
+	Ordinal0 [0x0047B215+1683989]
+	Ordinal0 [0x00486484+1729668]
 	BaseThreadInitThunk [0x75B9FA29+25]
 	RtlGetAppContainerNamedObjectPath [0x77437A9E+286]
 	RtlGetAppContainerNamedObjectPath [0x77437A6E+238]
@@ -367,118 +413,185 @@ Backtrace:
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221118 14:50:57.541" level="INFO">Opening browser 'Chrome' to base url 'https://en.mzadqatar.com/login'.</msg>
-<msg timestamp="20221118 14:51:04.812" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9EFEBC0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/81b6c2e4f841600a7f2db35e90a7de83/screenshot</msg>
-<msg timestamp="20221118 14:51:08.878" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9EFF1F0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/81b6c2e4f841600a7f2db35e90a7de83/screenshot</msg>
-<msg timestamp="20221118 14:51:12.894" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9EFF310&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/81b6c2e4f841600a7f2db35e90a7de83/screenshot</msg>
-<msg timestamp="20221118 14:51:16.930" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=49340): Max retries exceeded with url: /session/81b6c2e4f841600a7f2db35e90a7de83/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9EFF460&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</msg>
-<msg timestamp="20221118 14:51:16.930" level="FAIL">ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))</msg>
-<status status="FAIL" starttime="20221118 14:50:57.541" endtime="20221118 14:51:16.932"/>
+<msg timestamp="20221207 02:37:30.699" level="INFO">Opening browser 'Chrome' to base url 'https://en.mzadqatar.com/login'.</msg>
+<status status="PASS" starttime="20221207 02:37:30.699" endtime="20221207 02:37:32.947"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="NOT RUN" starttime="20221118 14:51:16.932" endtime="20221118 14:51:16.932"/>
-</kw>
-<kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>${DELAY}</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="NOT RUN" starttime="20221118 14:51:16.932" endtime="20221118 14:51:16.932"/>
-</kw>
-<status status="FAIL" starttime="20221118 14:50:57.541" endtime="20221118 14:51:16.933"/>
-</kw>
-<kw name="Give Username" library="resource">
-<arg>${user}</arg>
-<status status="NOT RUN" starttime="20221118 14:51:16.933" endtime="20221118 14:51:16.933"/>
-</kw>
-<kw name="Give Password" library="resource">
-<arg>${pass}</arg>
-<status status="NOT RUN" starttime="20221118 14:51:16.933" endtime="20221118 14:51:16.933"/>
-</kw>
-<kw name="Click the Login button" library="resource">
-<status status="NOT RUN" starttime="20221118 14:51:16.933" endtime="20221118 14:51:16.933"/>
-</kw>
-<kw name="Title Should Be" library="SeleniumLibrary">
-<arg>MzadQatar Login</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<status status="NOT RUN" starttime="20221118 14:51:16.933" endtime="20221118 14:51:16.933"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<msg timestamp="20221118 14:51:21.010" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9EFFD60&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/81b6c2e4f841600a7f2db35e90a7de83</msg>
-<msg timestamp="20221118 14:51:25.062" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9EFFE50&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/81b6c2e4f841600a7f2db35e90a7de83</msg>
-<msg timestamp="20221118 14:51:29.129" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9EFFFA0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/81b6c2e4f841600a7f2db35e90a7de83</msg>
-<status status="PASS" starttime="20221118 14:51:16.933" endtime="20221118 14:51:37.295"/>
-</kw>
-<status status="FAIL" starttime="20221118 14:50:57.540" endtime="20221118 14:51:37.295"/>
-</kw>
-<status status="FAIL" starttime="20221118 14:50:57.540" endtime="20221118 14:51:37.296">ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))</status>
-</test>
-<status status="FAIL" starttime="20221118 14:48:34.040" endtime="20221118 14:51:37.296"/>
-</suite>
-<statistics>
-<total>
-<stat pass="1" fail="5" skip="0">All Tests</stat>
-</total>
-<tag>
-</tag>
-<suite>
-<stat pass="1" fail="5" skip="0" id="s1" name="Invalid Login">Invalid Login</stat>
-</suite>
-</statistics>
-<errors>
-<msg timestamp="20221118 14:48:44.425" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9D7A230&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5a2d5d0ca2cb25aae48c7858251235df/screenshot</msg>
-<msg timestamp="20221118 14:48:48.503" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9D7A410&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5a2d5d0ca2cb25aae48c7858251235df/screenshot</msg>
-<msg timestamp="20221118 14:48:52.560" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9D7A560&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5a2d5d0ca2cb25aae48c7858251235df/screenshot</msg>
-<msg timestamp="20221118 14:48:56.663" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=65518): Max retries exceeded with url: /session/5a2d5d0ca2cb25aae48c7858251235df/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9D7A6B0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</msg>
-<msg timestamp="20221118 14:49:00.785" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9D7AFB0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5a2d5d0ca2cb25aae48c7858251235df</msg>
-<msg timestamp="20221118 14:49:04.864" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9D7B0A0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5a2d5d0ca2cb25aae48c7858251235df</msg>
-<msg timestamp="20221118 14:49:08.915" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9D7B1F0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5a2d5d0ca2cb25aae48c7858251235df</msg>
-<msg timestamp="20221118 14:49:26.421" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9ED8880&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/7b2f32b21ca62c9b6105047ec760cb4f/screenshot</msg>
-<msg timestamp="20221118 14:49:30.490" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9ED8A60&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/7b2f32b21ca62c9b6105047ec760cb4f/screenshot</msg>
-<msg timestamp="20221118 14:49:34.544" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9ED8C10&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/7b2f32b21ca62c9b6105047ec760cb4f/screenshot</msg>
-<msg timestamp="20221118 14:49:38.607" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=49182): Max retries exceeded with url: /session/7b2f32b21ca62c9b6105047ec760cb4f/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9ED8D60&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</msg>
-<msg timestamp="20221118 14:49:42.681" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9ED9660&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/7b2f32b21ca62c9b6105047ec760cb4f</msg>
-<msg timestamp="20221118 14:49:46.750" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9ED9750&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/7b2f32b21ca62c9b6105047ec760cb4f</msg>
-<msg timestamp="20221118 14:49:50.832" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9ED98A0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/7b2f32b21ca62c9b6105047ec760cb4f</msg>
-<msg timestamp="20221118 14:50:17.430" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9EFC430&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/3057ea503a48a4307b21ba40aef629c4/screenshot</msg>
-<msg timestamp="20221118 14:50:21.506" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9EFCA60&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/3057ea503a48a4307b21ba40aef629c4/screenshot</msg>
-<msg timestamp="20221118 14:50:25.591" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9D7B2B0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/3057ea503a48a4307b21ba40aef629c4/screenshot</msg>
-<msg timestamp="20221118 14:50:29.642" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=49270): Max retries exceeded with url: /session/3057ea503a48a4307b21ba40aef629c4/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9EDA650&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</msg>
-<msg timestamp="20221118 14:50:33.691" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9EDAEC0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/3057ea503a48a4307b21ba40aef629c4</msg>
-<msg timestamp="20221118 14:50:37.788" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9EDAB90&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/3057ea503a48a4307b21ba40aef629c4</msg>
-<msg timestamp="20221118 14:50:41.879" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9ED9A20&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/3057ea503a48a4307b21ba40aef629c4</msg>
-<msg timestamp="20221118 14:50:55.425" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+<msg timestamp="20221207 02:37:32.955" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
 from unknown error: web view not found
-  (Session info: chrome=107.0.5304.107)
+  (Session info: chrome=108.0.5359.95)
 Stacktrace:
 Backtrace:
-	Ordinal0 [0x00B5ACD3+2075859]
-	Ordinal0 [0x00AEEE61+1633889]
-	Ordinal0 [0x009EB7BD+571325]
-	Ordinal0 [0x009D2E1A+470554]
-	Ordinal0 [0x00A3AA0B+895499]
-	Ordinal0 [0x00A4AC96+961686]
-	Ordinal0 [0x00A37136+880950]
-	Ordinal0 [0x00A0FEFD+720637]
-	Ordinal0 [0x00A10F3F+724799]
-	GetHandleVerifier [0x00E0EED2+2769538]
-	GetHandleVerifier [0x00E00D95+2711877]
-	GetHandleVerifier [0x00BEA03A+521194]
-	GetHandleVerifier [0x00BE8DA0+516432]
-	Ordinal0 [0x00AF682C+1665068]
-	Ordinal0 [0x00AFB128+1683752]
-	Ordinal0 [0x00AFB215+1683989]
-	Ordinal0 [0x00B06484+1729668]
+	Ordinal0 [0x004DACD3+2075859]
+	Ordinal0 [0x0046EE61+1633889]
+	Ordinal0 [0x0036B7BD+571325]
+	Ordinal0 [0x00352E1A+470554]
+	Ordinal0 [0x003BAA0B+895499]
+	Ordinal0 [0x003CAC96+961686]
+	Ordinal0 [0x003B7136+880950]
+	Ordinal0 [0x0038FEFD+720637]
+	Ordinal0 [0x00390F3F+724799]
+	GetHandleVerifier [0x0078EED2+2769538]
+	GetHandleVerifier [0x00780D95+2711877]
+	GetHandleVerifier [0x0056A03A+521194]
+	GetHandleVerifier [0x00568DA0+516432]
+	Ordinal0 [0x0047682C+1665068]
+	Ordinal0 [0x0047B128+1683752]
+	Ordinal0 [0x0047B215+1683989]
+	Ordinal0 [0x00486484+1729668]
 	BaseThreadInitThunk [0x75B9FA29+25]
 	RtlGetAppContainerNamedObjectPath [0x77437A9E+286]
 	RtlGetAppContainerNamedObjectPath [0x77437A6E+238]
 </msg>
-<msg timestamp="20221118 14:51:04.812" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9EFEBC0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/81b6c2e4f841600a7f2db35e90a7de83/screenshot</msg>
-<msg timestamp="20221118 14:51:08.878" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9EFF1F0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/81b6c2e4f841600a7f2db35e90a7de83/screenshot</msg>
-<msg timestamp="20221118 14:51:12.894" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9EFF310&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/81b6c2e4f841600a7f2db35e90a7de83/screenshot</msg>
-<msg timestamp="20221118 14:51:16.930" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=49340): Max retries exceeded with url: /session/81b6c2e4f841600a7f2db35e90a7de83/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9EFF460&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))</msg>
-<msg timestamp="20221118 14:51:21.010" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9EFFD60&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/81b6c2e4f841600a7f2db35e90a7de83</msg>
-<msg timestamp="20221118 14:51:25.062" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9EFFE50&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/81b6c2e4f841600a7f2db35e90a7de83</msg>
-<msg timestamp="20221118 14:51:29.129" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000235C9EFFFA0&gt;: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/81b6c2e4f841600a7f2db35e90a7de83</msg>
+<msg timestamp="20221207 02:37:32.955" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=108.0.5359.95)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x004DACD3+2075859]
+	Ordinal0 [0x0046EE61+1633889]
+	Ordinal0 [0x0036B7BD+571325]
+	Ordinal0 [0x00352E1A+470554]
+	Ordinal0 [0x003BAA0B+895499]
+	Ordinal0 [0x003CAC96+961686]
+	Ordinal0 [0x003B7136+880950]
+	Ordinal0 [0x0038FEFD+720637]
+	Ordinal0 [0x00390F3F+724799]
+	GetHandleVerifier [0x0078EED2+2769538]
+	GetHandleVerifier [0x00780D95+2711877]
+	GetHandleVerifier [0x0056A03A+521194]
+	GetHandleVerifier [0x00568DA0+516432]
+	Ordinal0 [0x0047682C+1665068]
+	Ordinal0 [0x0047B128+1683752]
+	Ordinal0 [0x0047B215+1683989]
+	Ordinal0 [0x00486484+1729668]
+	BaseThreadInitThunk [0x75B9FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77437A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77437A6E+238]
+</msg>
+<status status="FAIL" starttime="20221207 02:37:32.947" endtime="20221207 02:37:32.963"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" starttime="20221207 02:37:32.971" endtime="20221207 02:37:32.971"/>
+</kw>
+<status status="FAIL" starttime="20221207 02:37:30.699" endtime="20221207 02:37:32.971"/>
+</kw>
+<kw name="Give Username" library="resource">
+<arg>${user}</arg>
+<status status="NOT RUN" starttime="20221207 02:37:32.971" endtime="20221207 02:37:32.971"/>
+</kw>
+<kw name="Give Password" library="resource">
+<arg>${pass}</arg>
+<status status="NOT RUN" starttime="20221207 02:37:32.971" endtime="20221207 02:37:32.971"/>
+</kw>
+<kw name="Click the Login button" library="resource">
+<status status="NOT RUN" starttime="20221207 02:37:32.971" endtime="20221207 02:37:32.971"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>MzadQatar Login</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="NOT RUN" starttime="20221207 02:37:32.971" endtime="20221207 02:37:32.971"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221207 02:37:32.971" endtime="20221207 02:37:35.121"/>
+</kw>
+<status status="FAIL" starttime="20221207 02:37:30.699" endtime="20221207 02:37:35.121"/>
+</kw>
+<status status="FAIL" starttime="20221207 02:37:30.699" endtime="20221207 02:37:35.121">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=108.0.5359.95)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x004DACD3+2075859]
+	Ordinal0 [0x0046EE61+1633889]
+	Ordinal0 [0x0036B7BD+571325]
+	Ordinal0 [0x00352E1A+470554]
+	Ordinal0 [0x003BAA0B+895499]
+	Ordinal0 [0x003CAC96+961686]
+	Ordinal0 [0x003B7136+880950]
+	Ordinal0 [0x0038FEFD+720637]
+	Ordinal0 [0x00390F3F+724799]
+	GetHandleVerifier [0x0078EED2+2769538]
+	GetHandleVerifier [0x00780D95+2711877]
+	GetHandleVerifier [0x0056A03A+521194]
+	GetHandleVerifier [0x00568DA0+516432]
+	Ordinal0 [0x0047682C+1665068]
+	Ordinal0 [0x0047B128+1683752]
+	Ordinal0 [0x0047B215+1683989]
+	Ordinal0 [0x00486484+1729668]
+	BaseThreadInitThunk [0x75B9FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77437A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77437A6E+238]
+</status>
+</test>
+<status status="FAIL" starttime="20221207 02:36:53.817" endtime="20221207 02:37:35.121"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="2" skip="0" id="s1" name="Invalid Login">Invalid Login</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20221207 02:37:28.520" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=108.0.5359.95)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x004DACD3+2075859]
+	Ordinal0 [0x0046EE61+1633889]
+	Ordinal0 [0x0036B7BD+571325]
+	Ordinal0 [0x00352E1A+470554]
+	Ordinal0 [0x003BAA0B+895499]
+	Ordinal0 [0x003CAC96+961686]
+	Ordinal0 [0x003B7136+880950]
+	Ordinal0 [0x0038FEFD+720637]
+	Ordinal0 [0x00390F3F+724799]
+	GetHandleVerifier [0x0078EED2+2769538]
+	GetHandleVerifier [0x00780D95+2711877]
+	GetHandleVerifier [0x0056A03A+521194]
+	GetHandleVerifier [0x00568DA0+516432]
+	Ordinal0 [0x0047682C+1665068]
+	Ordinal0 [0x0047B128+1683752]
+	Ordinal0 [0x0047B215+1683989]
+	Ordinal0 [0x00486484+1729668]
+	BaseThreadInitThunk [0x75B9FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77437A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77437A6E+238]
+</msg>
+<msg timestamp="20221207 02:37:32.955" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=108.0.5359.95)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x004DACD3+2075859]
+	Ordinal0 [0x0046EE61+1633889]
+	Ordinal0 [0x0036B7BD+571325]
+	Ordinal0 [0x00352E1A+470554]
+	Ordinal0 [0x003BAA0B+895499]
+	Ordinal0 [0x003CAC96+961686]
+	Ordinal0 [0x003B7136+880950]
+	Ordinal0 [0x0038FEFD+720637]
+	Ordinal0 [0x00390F3F+724799]
+	GetHandleVerifier [0x0078EED2+2769538]
+	GetHandleVerifier [0x00780D95+2711877]
+	GetHandleVerifier [0x0056A03A+521194]
+	GetHandleVerifier [0x00568DA0+516432]
+	Ordinal0 [0x0047682C+1665068]
+	Ordinal0 [0x0047B128+1683752]
+	Ordinal0 [0x0047B215+1683989]
+	Ordinal0 [0x00486484+1729668]
+	BaseThreadInitThunk [0x75B9FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77437A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77437A6E+238]
+</msg>
 </errors>
 </robot>

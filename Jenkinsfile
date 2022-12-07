@@ -14,9 +14,13 @@ pipeline {
      stage('UI') {
      steps{
          script {
-             dir('C:/Users/abdel/PycharmProjects/RobotFramework')  {
+           bat """
+    cd C:\Users\abdel\PycharmProjects\RobotFramework
 
-    bat 'robot ./Automation/TestSuits/Login/invalid_login.robot'
+    python -m robot -d Test-output Automation\TestSuits\Login\invalid_login.robot.
+
+   echo Completed 
+        """
           }
         }
       }
