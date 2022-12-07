@@ -10,7 +10,11 @@ pipeline {
 
     stages {
 
-
+ stage("Email") {
+            steps {
+              emailext attachLog: true, body: '', subject: 'Jenkins Pipeline Report', to: 'abdlhalimbelkadhi@gmail.com'
+            }
+        } 
      stage('Running Robot UI Tests') {
      steps{
      bat 'start cmd.exe /c C:\\Users\\abdel\\OneDrive\\Bureau\\automation.bat'
@@ -68,10 +72,6 @@ pipeline {
             }
             }
 
-        stage("Email") {
-            steps {
-              emailext attachLog: true, body: '', subject: 'Jenkins Pipeline Report', to: 'abdlhalimbelkadhi@gmail.com'
-            }
-        }
+
     }
 }
